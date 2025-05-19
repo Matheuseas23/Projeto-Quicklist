@@ -182,5 +182,15 @@ main {
     transition: opacity .4s ease, transform .4 ease;
     div {
         display: flex;
+        align-items: center;
+        gap: .8rem;
+    }
+
+    i{
+        font-size: 2rem;
+    }
+
+    button {
+        border: none 
     }
 }
