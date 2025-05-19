@@ -178,7 +178,7 @@ main {
     margin-top: 2.4rem;
     
     opacity: 1;
-    transform: translate(0);
+    transform: translateY(0);
     transition: opacity .4s ease, transform .4 ease;
     div {
         display: flex;
@@ -191,6 +191,14 @@ main {
     }
 
     button {
-        border: none 
+        border: none;
+        background: none;
+        color: var(--always-white);
+        
     }
+}
+
+.hide-warning {
+    opacity: 0;
+    transform: translateY(-10px);
 }
