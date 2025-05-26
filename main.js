@@ -50,4 +50,8 @@ function removeItems(itemName) {
   showItemsList()
 }
 
+function  addHideWarningClass () {
+  document.querySelector(".warning").classList.add
+}
+
    
