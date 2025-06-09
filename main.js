@@ -1,5 +1,4 @@
 const items = []
-
 function addItem() {
     const itemName = document.querySelector("#item").value
 
@@ -8,9 +7,7 @@ function addItem() {
       checked: false
    }
 
-   items.push(item)
-
-   document.querySelector("#item").value = ""
+   
 
   showItemsList()
    }
