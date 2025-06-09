@@ -5,10 +5,10 @@
 }
 
 :root {
-    font-family: "Inter", sans-serif;
+    font-family: "inter", sans-serif;
     font-size: 62.5%;
 
-    --background-primary: #F4F5FB;
+  --background-primary: #F4F5FB;
   --background-secondary: #FFF;
   --color-brand: #CA3884;
   --color-brand-hover: #A52C6B;
@@ -19,8 +19,6 @@
   --always-white: #FFF;
   --border-primary: #D1D5DB;
   --border-hover: #B9C2D0;
-
-
 }
 
 body {
@@ -33,12 +31,13 @@ header {
     margin-bottom: 4.4rem;
     max-width: 62.7rem;
     margin-inline: auto;
+
     display: flex;
     flex-direction: column;
     align-items: start;
 
     img {
-        width: 15.4rem;
+        width:15.4rem;
         margin-inline: auto;
         margin-bottom: 3rem;
     }
@@ -52,12 +51,11 @@ header {
         margin-bottom: 1.6rem;
         color: var(--color-brand);
         cursor: pointer;
-
     }
 
     h1 {
         font-size: 2.4rem;
-        color: var(--content-primary);
+        color: var(--content-primary) ;
         line-height: 3.2rem;
     }
 }
@@ -65,103 +63,106 @@ header {
 main {
     max-width: 62.7rem;
     margin-inline: auto;
-
 }
 
 .add-item {
     margin-bottom: 4rem;
-    input{
-        width: 100%;
-        padding:1.2rem;
-        border: 2px solid var(--border-primary);
-        border-radius: 1.2rem;
-        margin-bottom: 1.6rem;
-        outline: none;
-        color: var(--content-primary);
-        &::placeholder {
-            color: var(--content-tertiary);
-        }
 
-        &:hover {
-            border: 2px solid var(--border-hover);
-        }
+   input {
+    width: 100%;
+    padding: 1.2rem;
+    border: 2px solid var(--border-primary);
+    border-radius: 1.2rem;
+    margin-bottom: 1.6rem;
+    outline: none;
+    color: var(--content-primary);
+
+    &::placeholder {
+      color: var(--content-tertiary)
     }
-    &:focus {
+
+    &:hover {
+        border: 2px solid var(--border-hover);
+    }
+    &:focus{
         border: 2px solid var(--color-brand);
-    
     }
+ }
 
-    button{
-        background: var(--color-brand);
-        border: none;
-        color: var(--always-white);
-        width: 100%;
-        padding: 1rem 2.4rem;
-        line-height: 2rem;
-        border-radius:1.2rem;
-        font-weight: 600;
-        cursor: pointer;
+ button {
+    background: var(--color-brand);
+    border: none;
+    color: var(--always-white);
+    width: 100%;
+    padding: 1rem 2.4rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    border-radius: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
 
-        &:hover {
-            background: var(--color-brand-hover);
-
+    &:hover {
+        background: var(--color-brand-hover);
     }
-    }
+ }
 }
 
-.list{
-    .item {
-        background: var(--background-secondary);
-        padding: 1.2rem;
-        margin-bottom: 1.2rem;
+.list {
+   .item {
+    background: var(--background-secondary);
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 6px rgba(8, 11, 18, 0.2);
+
+    div {
         display: flex;
-        justify-content: space-between;
+        gap: 1.2rem;
         align-items: center;
-        font-size: 1.6rem;
-        line-height: 2.4rem;
-        font-weight: 500;
-        border-radius: 1.2rem;
-        box-shadow: 0 2px 6px rgba(8, 11, 18 , 0.2);
-
-        div{
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-
-        }
-        input{
-            display: none;
-        }
-        .custom-checkbox {
-            width: 1.6rem;
-            height: 1.6rem;
-            border: 1px solid var(--border-primary);
-            border-radius: .6rem;
-        }
-        div:has(input:checked){
-            .custom-checkbox{
-                background: var(--color-brand);
-                border: 1px solid var(--color-brand);
-                transition: .2s;
-            }
-
-            label {
-                text-decoration: line-through;
-            }
-
-        }
-
-        button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            img {
-                width: 1.6rem;
-                opacity: 0.7;
-            }
     }
+
+    input {
+        display: none
+    }
+
+   .custom-checkbox {
+        width: 1.6rem;
+        height: 1.6rem;
+        border: 1px solid var(--border-primary);
+        border-radius: 0.6rem;
+    }
+
+    div:has(input:checked){
+        .custom-checkbox {
+            background: var(--color-brand);
+            border: 1px solid var(--color-brand);
+            transition: 0.2px;
+        }
+
+        label {
+            text-decoration: line-through;
+        }
+    }
+
+    button {
+        background: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        img{
+            width: 1.6rem;
+            opacity: 0.7;
+        }
+    }
+
     label {
         cursor: pointer;
     }
@@ -171,22 +172,23 @@ main {
 .warning {
     background: var(--color-danger);
     color: var(--always-white);
-    padding: 1,2rem;
+    padding: 1.2rem;
     display: flex;
     justify-content: space-between;
     border-radius: 1.2rem;
     margin-top: 2.4rem;
-    
+
     opacity: 1;
     transform: translateY(0);
-    transition: opacity .4s ease, transform .4 ease;
-    div {
+    transition: opacity .4s ease, transform .4s ease;
+
+    div{
         display: flex;
         align-items: center;
-        gap: .8rem;
+        gap: 0.8rem;
     }
 
-    i{
+    i {
         font-size: 2rem;
     }
 
@@ -203,24 +205,26 @@ main {
     transform: translateY(-10px);
 }
 
-@media(min-width: 627px){
-    header{
-        img { 
-            margin-bottom: 6.4rem;
+@media(min-width: 627px) {
+    header {
+        img {
+           margin-bottom: 6.4rem;
         }
     }
-    .add-item{
-        display: grid;
-        grid-template-columns: repeat(10, 1fr);
-        gap: 1.6rem;
 
-        input{
-            margin-bottom: 0;
-            grid-column: 1 / 8;
-        }
-        button {
-            grid-column: 8 / 11;
-        }
-    }
-} 
 
+.add-item {
+   display: grid;
+   grid-template-columns: repeat(10, 1fr);
+   gap: 1.6rem;
+
+   input {
+       margin-bottom: 0;
+       grid-column: 1 / 8;
+   }
+
+   button {
+       grid-column: 8 / 11;
+   }
+}
+}
